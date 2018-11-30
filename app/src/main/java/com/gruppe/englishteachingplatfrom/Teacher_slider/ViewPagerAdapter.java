@@ -1,6 +1,7 @@
 package com.gruppe.englishteachingplatfrom.Teacher_slider;
 
 
+import android.app.Activity;
 import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -14,7 +15,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.github.aakira.expandablelayout.ExpandableLinearLayout;
+import com.github.aakira.expandablelayout.ExpandableRelativeLayout;
 import com.gruppe.englishteachingplatfrom.DialogBox;
+import com.gruppe.englishteachingplatfrom.MainActivity;
 import com.gruppe.englishteachingplatfrom.R;
 
 
@@ -25,6 +29,7 @@ public class ViewPagerAdapter extends PagerAdapter  {
 
     private List<ViewPagerModel> contents;
     private Context context;
+    ExpandableRelativeLayout expand;
 
     public ViewPagerAdapter(List<ViewPagerModel> contents, Context context) {
 
@@ -53,6 +58,7 @@ public class ViewPagerAdapter extends PagerAdapter  {
         LayoutInflater inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         final View view = inflater.inflate(R.layout.fragment_viewpager, container, false);
+        final View view1 = inflater.inflate(R.layout.fragment_viewpager_list, container, false);
 
         container.addView(view);
 
@@ -63,19 +69,22 @@ public class ViewPagerAdapter extends PagerAdapter  {
 
         name = (TextView) view.findViewById(R.id.name);
         name.setText(contents.get(position).getPlace());
+        expand = view1.findViewById(R.id.expand);
+
 
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 // this is the on click listerner for the objects in the viewpager
                 System.out.println("works");
+                System.out.println(expand.isExpanded());
+                System.out.println(expand);
 
+                expand.toggle();
 
 
               Toast.makeText(context,contents.get(position).names,Toast.LENGTH_SHORT).show();
-
-              view.getContext().
-
 
             }
         });
@@ -90,7 +99,6 @@ public class ViewPagerAdapter extends PagerAdapter  {
         container.removeView((View) object);
 
     }
-
 
 
 }
