@@ -53,7 +53,7 @@ public class ViewPagerAdapter extends PagerAdapter  {
     }
 
     @Override
-    public Object instantiateItem(ViewGroup container, final int position) {
+    public Object instantiateItem(final ViewGroup container, final int position) {
 
         LayoutInflater inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
@@ -69,20 +69,22 @@ public class ViewPagerAdapter extends PagerAdapter  {
 
         name = (TextView) view.findViewById(R.id.name);
         name.setText(contents.get(position).getPlace());
-        expand = view1.findViewById(R.id.expand);
+        expand = view.findViewById(R.id.expand);
 
+        expand.collapse();
 
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 // this is the on click listerner for the objects in the viewpager
                 System.out.println("works");
                 System.out.println(expand.isExpanded());
                 System.out.println(expand);
 
-                expand.toggle();
 
+                expand.getCurrentPosition();
+                expand.toggle();
+                expand.expand();
 
               Toast.makeText(context,contents.get(position).names,Toast.LENGTH_SHORT).show();
 
@@ -92,6 +94,8 @@ public class ViewPagerAdapter extends PagerAdapter  {
         return view;
 
     }
+
+
 
     @Override
     public void destroyItem(ViewGroup container, int position, Object object) {
