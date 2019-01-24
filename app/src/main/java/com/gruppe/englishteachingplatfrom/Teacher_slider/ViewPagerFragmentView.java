@@ -42,27 +42,34 @@ public class ViewPagerFragmentView extends Fragment {
 
         mContents = new ArrayList<>();
 
-        int images[] = {R.drawable.profile1, R.drawable.profile2, R.drawable.profile3 };
+        //Created for counting images
 
-        img.add(R.drawable.profile1);
-        img.add(R.drawable.profile2);
-        img.add(R.drawable.profile3);
+        int images[] = {R.drawable.fire, R.drawable.water, R.drawable.air, R.drawable.earth};
+
+        img.add(R.drawable.fire);
+        img.add(R.drawable.water);
+        img.add(R.drawable.air);
+        img.add(R.drawable.earth);
 
        // String names[] = {"Smith", "Johnson", "David", "Adam"};
 
-        info.getNames().add("Smith");
-        info.getNames().add("Johnson");
-        info.getNames().add("David");
-        info.getNames().add("Adam");
+        info.getNames().add("Zero");
+        info.getNames().add("Zero");
+        info.getNames().add("Zero");
+        info.getNames().add("Zero");
 
        // String desig[] = {"English Teacher"};
-        info.getProf().add("English Teacher");
+        info.getProf().add("FireDragon");
+        info.getProf().add("WaterDragon");
+        info.getProf().add("AirDragon");
+        info.getProf().add("EarthDragon");
 
        // String place[] = {"USA", "DENMARK", "SWEDEN"};
 
-        info.getNation().add("USA");
-        info.getNation().add("Denmark");
-        info.getNation().add("Sweden");
+        info.getNation().add("FireDragon");
+        info.getNation().add("WaterDragon");
+        info.getNation().add("AirDragon");
+        info.getNation().add("EarthDragon");
 
         ArrayList<String> names = info.getNames();
         ArrayList<String> prof = info.getProf();
@@ -75,7 +82,7 @@ public class ViewPagerFragmentView extends Fragment {
 
             viewPagerModel.names = names.get(i);
 
-            viewPagerModel.desig = prof.get(0);
+            viewPagerModel.desig = prof.get(i);
 
             viewPagerModel.place = nation.get(i);
 

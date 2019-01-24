@@ -50,7 +50,7 @@ public class ConfirmationBox extends Fragment implements View.OnClickListener {
         confirmationText = vw.findViewById(R.id.ConfirmationMessage2);
         ratingBar = vw.findViewById(R.id.RatingBar2);
 
-        okayButton = vw.findViewById(R.id.OkayButton);
+        okayButton = vw.findViewById(R.id.AwesomeButton);
         teacherImage.setImageResource(pic);
         teacherInfo.setText(info.getNames().get(pos)+ "\nPro. Teacher\n180 DKK/hr");
         okayButton.setOnClickListener(this);

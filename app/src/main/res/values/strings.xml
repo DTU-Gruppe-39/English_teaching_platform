@@ -13,8 +13,8 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <string name="dialogbox_text">Marie\nPro. Teacher\n180 DKK/hr </string>
-    <string name="dialogbox_text2">Are you sure you want to send a request to Marie? </string>
+    <string name="dialogbox_text">Marie\n Price 20 </string>
+    <string name="dialogbox_text2">Are you sure you want to sell your monster? </string>
     <string name="confirmation_text">Congratulations. \nThe request has been\nsent</string>
     <string name="title_activity_loginOrSignup">LoginActivity</string>
     <string name="title_activity_whatAreYou">Signup</string>

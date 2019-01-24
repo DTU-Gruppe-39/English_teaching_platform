@@ -67,14 +67,14 @@
                 app:layout_constraintVertical_bias="1.0" />
 
             <Button
-                android:id="@+id/OkayButton"
+                android:id="@+id/AwesomeButton"
                 android:layout_width="95dp"
                 android:layout_height="52dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="100dp"
                 android:layout_marginBottom="27dp"
                 android:backgroundTint="@color/colorPrimary"
-                android:text="Okay"
+                android:text="Awesome! "
                 android:textColor="@android:color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -91,7 +91,7 @@
                 android:layout_marginBottom="21dp"
                 android:text="@string/confirmation_text"
                 android:textSize="17sp"
-                app:layout_constraintBottom_toTopOf="@+id/OkayButton"
+                app:layout_constraintBottom_toTopOf="@+id/AwesomeButton"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/TeacherImage2" />
